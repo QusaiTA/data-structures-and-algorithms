@@ -27,13 +27,11 @@ let starWarsPeople = [
 const sortStarWarsCharacters = (starWarsArr) => {
   // Solution code here...
 
-  let array =starWarsArr.sort((a,b) => {
-    a.name - b.name
+  return starWarsArr.sort((a, b) => (b.height - a.height));
 
 
 
-  })
-  return array
+  
 
 };
 
@@ -75,12 +73,13 @@ For example, if the input is 'Welcome', the output will be:
 ------------------------------------------------------------------------------------------------ */
 
 const howMuchPencil = (str) => {
-  let result = [];
+  
   // Solution code here...
-  for(let i = 0 ; i < str.length ; i++){
+  let result = [];
+  for(let i = 0 ; i < str.length+1 ; i++){
 
-    str.slice(0,0);
-    result.push(str);
+    // str.slice(0,0);
+    result.push(str.slice(i));
   }
   return result;
 };
@@ -95,6 +94,7 @@ For example, wordsToCharList('gregor') returns ['g','r','e','g','o','r'].
 
 const wordsToCharList = (arr) => {
   // Solution code here...
+  return(arr.split(''));
 };
 
 
@@ -142,6 +142,24 @@ const gruffaloCrumble = {
 const listFoods = (recipe) => {
   let result = [];
   // Solution code here...
+  for (let x = 0; x < recipe.ingredients.length; x++) {
+
+    var spaceCount = (recipe.ingredients[x].split(" ").length - 1);
+    if (spaceCount === 2) {
+      result.push(recipe.ingredients[x].slice(recipe.ingredients[x].lastIndexOf(" ") + 1));
+    }
+
+    else {
+      var index = recipe.ingredients[x].indexOf(' ', recipe.ingredients[x].indexOf(' ') + 1);
+
+     
+      if (index >= 0)
+        var secondChunk = recipe.ingredients[x].substr(index + 1);
+
+      result.push(secondChunk);
+    }
+
+  }
   return result;
 };
 
