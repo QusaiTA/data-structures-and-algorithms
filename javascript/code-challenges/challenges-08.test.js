@@ -135,12 +135,7 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 
 const citiesAtoJ = (arr) => {
   // Solution code here...
-  let regex = /[A-J].?\s+/g;
-  let words = arr.join(' ');
-  console.log(words)
-  let newArr = words.match(regex)
-  console.log(newArr)
-  return newArr;
+  let newArray= arr.filter(value => value.match(/^[A-J]/g)); return newArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
