@@ -9,8 +9,8 @@ Write a function named returnTen, takes in a string and uses split and splice to
 
 function returnTen(str){
   // Solution code here...
-  str.slice(srt.length - 10);
-  str.splice()
+  return str.split('').splice(-10);
+  
 }
 
 /* ------------------------------------------------------------------------------------------------
