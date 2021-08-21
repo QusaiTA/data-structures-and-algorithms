@@ -163,10 +163,10 @@ let findMaleAndFemale = (data) => {
   return data.filter((obj) => {
       return !regex.test(obj.name) && obj.name;
     })
-    .map((obj) => {
+    .map((obj) =>  {
       return obj.name;
     })
-    .join(" and  ");
+    .join(" and ");
 };
 
 /* ------------------------------------------------------------------------------------------------
